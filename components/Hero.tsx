@@ -9,7 +9,7 @@ const skills = [
 export function Hero() {
   return (
     <section className="min-h-screen flex flex-col pt-34 px-6 mx-auto max-w-6xl">
-      <h1 className="text-4xl font-bold text-white mb-4">
+      <h1 className="text-4xl font-bold text-white mb-4 ">
         Andrêa Ribeiro Ferreira
       </h1>
 
@@ -24,7 +24,7 @@ export function Hero() {
         Software engineer developing accesible and user-centered digital web
         products.
       </p>
-      <div className="mt-16 flex gap-4">
+      <div className="mt-16 flex gap-4 flex-wrap">
         {skills.map((skill) => (
           <p
             key={skill}
@@ -35,7 +35,7 @@ export function Hero() {
         ))}
       </div>
 
-      <div className="mt-16 flex gap-8">
+      <div className="mt-16 flex justify-center gap-8 md:justify-start">
         <a
           href="mailto:andreavm.ribeiro@gmail.com"
           className="bg-[#EC8627] text-black px-5 py-3 rounded-md font-semibold transition-colors 
