@@ -6,7 +6,8 @@ export function ScrollToTopButton() {
     <div className="group relative ">
       <button
         aria-label="Scroll to top"
-        className="cursor-pointer px-3 py-3 rounded-full bg-white/70 text-black transition-colors hover:bg-white hover:text-black mt-2"
+        className="cursor-pointer px-3 py-3 rounded-full bg-white/70 text-black transition-colors hover:bg-white hover:text-black mt-2
+        active:bg-white"
         onClick={() => window.scrollTo({ top: 0, behavior: "smooth" })}
       >
         <ChevronsUp size={32} />
