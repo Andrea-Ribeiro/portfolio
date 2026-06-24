@@ -45,12 +45,15 @@ function NavigationMenu({
       {navigationItems.map((item) => {
         const isActive = activeItem === item.href;
         const Icon = item.icon;
-        const textColor = isActive ? "text-[#F1A55E]" : "text-[#F7CFA8]";
+        const mobileActiveColor = isActive
+          ? "text-primary-500"
+          : "text-primary-300";
+        const textColor = mobile ? mobileActiveColor : "text-muted";
 
         return (
           <li
             key={item.href}
-            className={`w-full flex gap-2 items-center justify-start px-4 ${isActive && activeStyle}`}
+            className={`w-full flex gap-2 items-center justify-start px-4 ${isActive ? activeStyle : ""}`}
           >
             {mobile && <Icon size={20} className={textColor} />}
             <a
@@ -72,15 +75,15 @@ export function Header() {
   const [openDrawer, setOpenDrawer] = useState(false);
 
   return (
-    <header className="sticky top-0 border-b border-white/14 bg-black z-50 ">
+    <header className="sticky top-0 border-b border-white/14 bg-background z-50 ">
       <div className="mx-auto flex max-w-6xl items-center justify-between px-6 py-4">
         <p className="text-xl font-semibold">ARF</p>
         <nav className="block md:hidden">
           <button
             aria-label="Open menu"
-            className="cursor-pointer text-white/70 
+            className="cursor-pointer text-muted
             transition-colors 
-            hover:text-white p
+            hover:text-primary-500
             px-2
             py-2
             rounded-full
@@ -104,7 +107,7 @@ export function Header() {
                 setActiveItem(href);
                 setOpenDrawer(false);
               }}
-              activeStyle="bg-[#343434] rounded-full "
+              activeStyle="bg-surface rounded-full "
               mobile={true}
             />
           </Drawer>
@@ -112,20 +115,20 @@ export function Header() {
         <nav className="hidden md:block">
           <NavigationMenu
             containerStyle="flex gap-6"
-            itemStyle="text-white/70 transition-colors px-3 py-1 rounded-md 
+            itemStyle="text-muted transition-colors px-3 py-1 rounded-md 
             transition-all 
             duration-200 
             hover:text-white 
             focus:outline 
             focus:outline-2 
             focus:outline-offset-2 
-            focus:outline-[#EC8627]"
+            focus:outline-primary-500"
             activeItem={activeItem}
             onClickItem={(href) => {
               setActiveItem(href);
               setOpenDrawer(false);
             }}
-            activeStyle="bg-[#211103] border-[#EC8627] border text-white/100 rounded-md"
+            activeStyle="bg-secondary border-primary-500 border text-base rounded-md"
           />
         </nav>
       </div>

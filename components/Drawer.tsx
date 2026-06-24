@@ -19,7 +19,7 @@ export function Drawer({ title, children, isOpen, onClose }: DrawerProps) {
           onClick={onClose}
         />
         <div className="fixed z-50 right-0 min-w-60 top-0 h-screen bg-[#151819] flex flex-col gap-6 px-4">
-          <div className="flex justify-between pt-4 py-3 text-[#F4BA83]">
+          <div className="flex justify-between pt-4 py-3 text-primary-400">
             <p>{title}</p>
             <button aria-label="Close drawer" onClick={onClose}>
               <X />

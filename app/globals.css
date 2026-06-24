@@ -3,6 +3,17 @@
 :root {
   --background: #171717;
   --foreground: #ffffff;
+
+  /* Brand Colors */
+  --primary-500: #f09d51;
+  --primary-400: #f3b377;
+  --primary-300: #f7cfa8;
+  --secondary: #211103;
+  --surface: #343434;
+
+  /* Text Colors */
+  --base: #ffffff;
+  --muted: #e0dfd5;
 }
 
 @theme inline {
@@ -10,6 +21,16 @@
   --color-foreground: var(--foreground);
   --font-sans: var(--font-geist-sans);
   --font-mono: var(--font-geist-mono);
+
+  --color-primary-500: var(--primary-500);
+  --color-primary-400: var(--primary-400);
+  --color-primary-300: var(--primary-300);
+
+  --color-secondary: var(--secondary);
+  --color-surface: var(--surface);
+
+  --color-base: var(--base);
+  --color-muted: var(--muted);
 }
 
 @media (prefers-color-scheme: dark) {
