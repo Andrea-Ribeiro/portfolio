@@ -61,7 +61,7 @@ export function Hero() {
           focus:outline-offset-2
           focus:outline-primary-500"
         >
-          See selected work
+          View work
         </a>
       </div>
     </section>

@@ -1,6 +1,4 @@
-import { Header } from "@/components/Header";
-import { Hero } from "@/components/Hero";
-import { ScrollToTopButton } from "@/components/ScrollToTopButton";
+import { Header, Hero, About, Skills, ScrollToTopButton } from "@/components";
 
 export default function Home() {
   return (
@@ -9,18 +7,9 @@ export default function Home() {
 
       <main id="top">
         <Hero />
-        <section
-          id="about"
-          className="min-h-screen mt-5 scroll-mt-20 mx-auto max-w-6xl px-6"
-        >
-          About
-        </section>
-        <section
-          id="skills"
-          className="min-h-screen scroll-mt-20 mx-auto max-w-6xl px-6"
-        >
-          Skills
-        </section>
+        <About />
+        <Skills />
+
         <section
           id="work"
           className="min-h-screen scroll-mt-20 mx-auto max-w-6xl px-6"
